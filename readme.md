@@ -47,12 +47,12 @@ call(commands)
 ```
 and thats it, outputs are dataframes with genome and parent information, cattributes, and images!
 
-### some project I would like to do when I have time:
+### some projects I would like to do when I have time:
 
 1. Decipher the kitty genome
 2. Gather economic and auction data
 3. Generate new kitty images, aka Crypto-Kitty-GAN!
-4. Some explorartory analysis on breeding trends, geneology, and cattributes
+4. Some exploratory analysis on breeding trends, geneology, and cattributes
 
 
 
