@@ -6,16 +6,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.0"> </script>
 
     <script> 
-    const model =  tf.loadModel('v2_6/model.json');
+    //const model =  tf.loadModel('v2_10/model.json');
+    const model =  tf.loadModel('/releases/tag/2.10/model.json');
     </script>
   </head>
 
   <body>
       <center>
           <br>
-          <h3>meow</h3>
+          <h5>meow</h5>
 
-          <canvas id="canvas" width="96" height="96" style="width:300; height:300;"></canvas>
+          <canvas id="canvas" width="96" height="96" style="width:96; height:96;"></canvas>
 
           <br>
           <button class='btn-primary' onclick="generate();">generate</button>
@@ -40,9 +41,7 @@
               loading_text.textContent='generating...';
               
               var r = tf.randomNormal([1,64]);
-              //var r = tf.zeros([1,100]);
               var z = await gen.predict(r).squeeze();
-              //z = z.mul(tf.scalar(.5)).add(tf.scalar(.5))
 
               var result = await tf.toPixels(tf.clipByValue(z,0,1), canvas);
               loading_text.textContent='';
@@ -53,7 +52,6 @@
           }
           
           load();
-          //generate();
           
           
       </script>
