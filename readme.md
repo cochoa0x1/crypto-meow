@@ -1,6 +1,6 @@
 # Generate Cryptokitties Dataset
 
-<img src="./kitty-eth.svg"/>
+![meow](./kitty-eth.svg)
 
 <p> [Cryptokitties](https://www.cryptokitties.co) is a digital cat collecting game based on the Ethereum network. It once accounted for the bulk of ethereum transactions and was a short lived craze seeing people buying and selling digital cats for hundreds of us dollars.
 This repo contains some scripts that scrape the blockchain for cat genome information and scrape a few websites to download a sample of cat images and attributes. This information can be used to decipher the black box kitty breeding formula and unlock the kitty genome! (or rather, that was my goal)
@@ -47,12 +47,12 @@ call(commands)
 ```
 and thats it, outputs are dataframes with genome and parent information, cattributes, and images!
 
-### some project I would like to do when I have time:
+### some projects I would like to do when I have time:
 
 1. Decipher the kitty genome
 2. Gather economic and auction data
 3. Generate new kitty images, aka Crypto-Kitty-GAN!
-4. Some explorartory analysis on breeding trends, geneology, and cattributes
+4. Some exploratory analysis on breeding trends, geneology, and cattributes
 
 
 
