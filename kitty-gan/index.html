@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <!-- Load TensorFlow.js -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.0"> </script>
+
+    <script> 
+    const model =  tf.loadModel('v2_6/model.json');
+    </script>
+  </head>
+
+  <body>
+      <center>
+          <br>
+          <h3>meow</h3>
+
+          <canvas id="canvas" width="96" height="96" style="width:300; height:300;"></canvas>
+
+          <br>
+          <button class='btn-primary' onclick="generate();">generate</button>
+          <br>
+          <strong id="loading">loading...</strong>
+     </center>
+
+      <script>
+          
+          var canvas = document.getElementById('canvas');
+          var loading_text = document.getElementById('loading');
+          var gen;
+          
+          async function load(){
+              loading_text.textContent='loading...';
+              gen =  await model;
+              generate();
+          }
+          
+          async function generate(){
+              
+              loading_text.textContent='generating...';
+              
+              var r = tf.randomNormal([1,64]);
+              //var r = tf.zeros([1,100]);
+              var z = await gen.predict(r).squeeze();
+              //z = z.mul(tf.scalar(.5)).add(tf.scalar(.5))
+
+              var result = await tf.toPixels(tf.clipByValue(z,0,1), canvas);
+              loading_text.textContent='';
+              
+              r.dispose();
+              z.dispose();
+              
+          }
+          
+          load();
+          //generate();
+          
+          
+      </script>
+  </body>
+</html>
