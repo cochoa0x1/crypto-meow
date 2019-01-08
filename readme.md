@@ -1,5 +1,7 @@
 # Generate Cryptokitties Dataset
 
+#### Generate new cats https://cochoa0x1.github.io/crypto-meow/kitty-gan/
+
 ![meow](./kitty-eth.svg)
 
 <p> [Cryptokitties](https://www.cryptokitties.co) is a digital cat collecting game based on the Ethereum network. It once accounted for the bulk of ethereum transactions and was a short lived craze seeing people buying and selling digital cats for hundreds of us dollars.
