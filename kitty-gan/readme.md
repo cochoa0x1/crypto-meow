@@ -14,3 +14,6 @@ to convert the frames to video:
 ```bash
 ffmpeg -i cats/%4d.png output.mp4
 ```
+
+#### model is live here!
+https://cochoa0x1.github.io/crypto-meow/kitty-gan/
