@@ -17,3 +17,8 @@ ffmpeg -i cats/%4d.png output.mp4
 
 #### model is live here!
 https://cochoa0x1.github.io/crypto-meow/kitty-gan/
+
+
+#### here is a video of the training process!
+
+[![](https://img.youtube.com/vi/bsDgN9w8P20/0.jpg)](https://www.youtube.com/watch?v=bsDgN9w8P20)
